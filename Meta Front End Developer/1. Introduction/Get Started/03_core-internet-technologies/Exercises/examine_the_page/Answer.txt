@@ -1,2 +1,0 @@
-value that the ID:
-id="logo1"
