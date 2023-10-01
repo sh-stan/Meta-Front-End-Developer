@@ -1,0 +1,8 @@
+2023.09.30 13:34:48 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/coder/project/.metals/lsp.trace.json or /home/coder/.cache/metals/lsp.trace.json
+2023.09.30 13:34:49 INFO  logging to file /home/coder/project/.metals/metals.log
+2023.09.30 13:34:49 INFO  Started: Metals version 0.11.2 in workspace '/home/coder/project' for client code-server 1.60.0.
+2023.09.30 13:34:49 INFO  Parse release: 11.0.14.1
+2023.09.30 13:34:53 INFO  time: initialize in 3.51s
+2023.09.30 13:34:53 WARN  Build server is not auto-connectable.
+2023.09.30 13:34:53 WARN  no build tool detected in workspace '/home/coder/project'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.09.30 13:53:11 INFO  shutting down Metals
