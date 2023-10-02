@@ -1,0 +1,288 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  The
+  <var>
+   &lt;iframe&gt;
+  </var>
+  is the inline frame element that embeds an HTML page into another page.  
+
+Apart from the global attributes, which can be a part of the
+  <var>
+   iframe
+  </var>
+  , major element-specific attributes are listed below.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  allow
+ </h2>
+ <p>
+  It specifies what features or permissions are available to the frame, for instance, access to the microphone, camera, other APIs and so on. For example:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    <var>
+     allow="fullscreen”
+    </var>
+    the fullscreen mode can be activated
+   </p>
+  </li>
+  <li>
+   <p>
+    <var>
+     allow=“geolocation”
+    </var>
+    lets you access the user’s location
+   </p>
+  </li>
+ </ul>
+ <p>
+  To specify more than one feature, a semicolon-separator should be used between features. For example, the following would allow using the camera and the microphone:
+ </p>
+ <p>
+  <var>
+   &lt;iframe src="https://example.com/…" allow="camera; microphone"&gt; &lt;/iframe&gt;
+  </var>
+ </p>
+ <h2 level="2" variant="h2semibold">
+  name
+ </h2>
+ <p>
+  The name for the
+  <var>
+   &lt;iframe&gt;
+  </var>
+  . For example:
+  <var>
+   &lt;iframe name = "My Frame" width="400" height="300"&gt;&lt;/iframe&gt;
+  </var>
+ </p>
+ <h2 level="2" variant="h2semibold">
+  height
+ </h2>
+ <p>
+  It specifies the height of the frame. The default value is 150, in terms of CSS pixels. width
+ </p>
+ <h2 level="2" variant="h2semibold">
+  width
+ </h2>
+ <p>
+  Specifies the width of the frame, in terms of CSS pixels. The default value is 300 pixels.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  referrerpolicy
+ </h2>
+ <p>
+  A referrer is the HTTP header that lets the page know who is loading it. This attribute indicates which referrer information to send when loading the frame resource. The common values are:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    <var>
+     no-referrer
+    </var>
+    The referrer header will not be sent.
+   </p>
+  </li>
+  <li>
+   <p>
+    <var>
+     origin
+    </var>
+    The referrer will be limited to the origin of the referring page
+   </p>
+  </li>
+  <li>
+   <p>
+    <var>
+     strict-origin
+    </var>
+    The origin of the document is sent as the referrer only when using the same protocol security level (HTTPS to HTTPS)
+   </p>
+  </li>
+ </ul>
+ <h2 level="2" variant="h2semibold">
+  sandbox
+ </h2>
+ <p>
+  To enforce greater security, a sandbox applies extra restrictions to the content in the
+  <var>
+   &lt;iframe&gt;
+  </var>
+  . To lift particular restrictions, an attribute value (permission token) is used. The common permission tokens are listed below:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    <var>
+     allow-downloads
+    </var>
+    Allows the user to download an item
+   </p>
+  </li>
+  <li>
+   <p>
+    <var>
+     allow-forms
+    </var>
+    Allows the user to submit forms
+   </p>
+  </li>
+  <li>
+   <p>
+    <var>
+     allow-modals
+    </var>
+    The resource can open modal windows
+   </p>
+  </li>
+  <li>
+   <p>
+    <var>
+     allow-orientation-lock
+    </var>
+    Lets the resource lock the screen orientation
+   </p>
+  </li>
+  <li>
+   <p>
+    <var>
+     allow-popups
+    </var>
+    Allows popups to open
+   </p>
+  </li>
+  <li>
+   <p>
+    <var>
+     allow-presentation
+    </var>
+    Allows a presentation session to start
+   </p>
+  </li>
+  <li>
+   <p>
+    <var>
+     allow-scripts
+    </var>
+    Lets the resource run scripts without creating popup windows
+   </p>
+  </li>
+ </ul>
+ <p>
+  Note that when the value of this attribute is empty, all restrictions are applied. To apply more than one permission, use a space-separated list. For example, the following would allow form submission and scripts while keeping other restrictions active:
+ </p>
+ <pre language="html">&lt;iframe src="my_iframe_sandbox.html" sandbox="allow-forms allow-scripts"&gt; 
+&lt;/iframe&gt; </pre>
+ <h2 level="2" variant="h2semibold">
+  src
+ </h2>
+ <p>
+  The URL of the page to embed in the
+  <var>
+   &lt;iframe&gt;
+  </var>
+  . Using the value
+  <var>
+   about:blank
+  </var>
+  would embed an empty page.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  srcdoc
+ </h2>
+ <p>
+  Let's you specify the inline HTML to embed in the
+  <var>
+   &lt;iframe&gt;
+  </var>
+  . When defined, this attribute would override the
+  <var>
+   src
+  </var>
+  attribute.  
+
+For instance, the following code will display "My inline html" in the frame, instead of loading
+  <var>
+   my_iframe_src.html
+  </var>
+  .
+ </p>
+ <pre language="html">&lt;iframe src="my_iframe_src.html" srcdoc="&lt;p&gt;My inline html&lt;/p&gt;" &gt; 
+&lt;/iframe&gt; </pre>
+ <h2 level="2" variant="h2semibold">
+  loading
+ </h2>
+ <p>
+  This attribute let's you specify if the iframe should be loaded immediately when the web page loads (
+  <var>
+   eager
+  </var>
+  ) or loaded when iframe is displayed in the browser (
+  <var>
+   lazy
+  </var>
+  ). This allows you to defer loading iframe content if it is further down your web page and outside of the display area when the page is initially loaded.
+ </p>
+ <pre language="html">&lt;iframe src="my_iframe_src.html" loading="lazy" &gt; 
+&lt;/iframe&gt; </pre>
+ <h2 level="2" variant="h2semibold">
+  title
+ </h2>
+ <p>
+  This attribute let's you add a description to the iframe for accessibility purposes. The value of this attribute should accurately describe the iframe's content.
+ </p>
+ <pre language="html">&lt;iframe src="history.html" title="An embedded document about the history of my family" &gt; 
+&lt;/iframe&gt; </pre>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
