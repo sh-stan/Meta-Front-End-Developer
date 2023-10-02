@@ -1,0 +1,1400 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  Simple selectors
+ </h2>
+ <table columns="3" rows="5">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Selector
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Syntax
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Example
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Element
+    </p>
+   </td>
+   <td>
+    <p>
+     element
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      div {
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Class
+    </p>
+   </td>
+   <td>
+    <p>
+     .class
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      .alpha {
+}
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ID
+    </p>
+   </td>
+   <td>
+    <p>
+     #id
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      #alpha {
+}
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Universal
+    </p>
+   </td>
+   <td>
+    <p>
+     *
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      * {
+}
+     </var>
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Variations of simple selectors
+ </h2>
+ <table columns="4" rows="5">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Elements
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Syntax
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Example
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Description
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Two classes
+    </p>
+   </td>
+   <td>
+    <p>
+     .first-class.second-class
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      .alpha.beta {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All elements with classes alpha and beta
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Element and class
+    </p>
+   </td>
+   <td>
+    <p>
+     element.class
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p.alpha {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All alpha class elements inside &lt;p&gt;
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Two elements
+    </p>
+   </td>
+   <td>
+    <p>
+     element, element
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p, div {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All &lt;p&gt; and &lt;div&gt; elements
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Two elements
+    </p>
+   </td>
+   <td>
+    <p>
+     element element
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p div {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All &lt;div&gt; elements inside &lt;p&gt;
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Descendant selectors/combinators
+ </h2>
+ <table columns="4" rows="5">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Selector
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Syntax
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Example
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Description
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Descendant
+    </p>
+   </td>
+   <td>
+    <p>
+     element element
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      div p {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All &lt;p&gt; descendants of &lt;div&gt;
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Child
+    </p>
+   </td>
+   <td>
+    <p>
+     element&gt;element
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      div &gt; p {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All &lt;p&gt; direct descendants of &lt;div&gt;
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Adjacent Sibling
+    </p>
+   </td>
+   <td>
+    <p>
+     element+element
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      div + p {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     &lt;p&gt; element directly after &lt;div&gt;
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     General Sibling
+    </p>
+   </td>
+   <td>
+    <p>
+     element~element
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      div ~ p {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All &lt;p&gt; element iterations after &lt;div&gt;
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Attribute selectors
+ </h2>
+ <table columns="3" rows="8">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Selector
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Syntax
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Example
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     [attribute]
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      [href] {
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Selects all elements with a href attribute
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     [attribute=value]
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      [lang="fr"] {
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Selects all elements with lang attribute that has a value of "fr"
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     [attribute~=value]
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      [input~=hello] {
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Elements with input attribute containing the whitespace separated substring "hello"
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     [attribute|=value]
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      [lang|=en] {
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Elements with lang attribute value equal to "en" or "en-"(en hyphen)
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     [attribute^=value]
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      a[href^="https"] {
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Every &lt;a&gt; element with href attribute value begins with "https"
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     [attribute$=value]
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      a[href$=".docx"] {
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Every &lt;a&gt; element with href attribute value ends with ".docx"
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     [attribute*=value]
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      a[href*="meta"] {
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Every &lt;a&gt; element with href attribute value has substring "meta"
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+ </p>
+ <table columns="3" rows="29">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Pseudo-class
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Example
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Description of selection
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     :active
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      a:active {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All active links
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :checked
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input:checked {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the checked &lt;input&gt; elements
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :default
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input:default {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All default &lt;input&gt; elements
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :disabled
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input:disabled {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All disabled &lt;input&gt; elements
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :empty
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      div:empty {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the &lt;div&gt; elements with no children
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :enabled
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input:enabled {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the enabled &lt;input&gt; elements
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :first-child
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p:first-child {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the &lt;p&gt; elements who are the first child of a parent element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :first-of-type
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p:first-of-type {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the &lt;p&gt; element who are the first &lt;p&gt; element of a parent element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :focus
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input:focus {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Input element under focus
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :fullscreen
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      :fullscreen {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     The element in full-screen mode
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :hover
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p:hover {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Action effect on mouse hover
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :invalid
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input:invalid {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Input elements with an invalid value
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :last-child
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p:last-child {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the &lt;p&gt; elements who are the last child of a parent element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :last-of-type
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p:last-of-type {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the &lt;p&gt; elements who are the last &lt;p&gt; element of a parent element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :link
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      a:link {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All unvisited links
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :not(
+     <em>
+      selector
+     </em>
+     )
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      :not(div) {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the elements that are not a &lt;div&gt; element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :nth-child(
+     <em>
+      n
+     </em>
+     )
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      div:nth-child(3) {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the &lt;p&gt; elements that are the third child of a parent element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :nth-last-child(
+     <em>
+      n
+     </em>
+     )
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      div:nth-last-child(3) {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the &lt;div&gt; elements which are the third child of a parent element, counting from last child element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :nth-last-of-type(
+     <em>
+      n
+     </em>
+     )
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p:nth-last-of-type(2) {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     The second sibling from the last child of a parent element.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :nth-of-type(
+     <em>
+      n
+     </em>
+     )
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p:nth-of-type(2) {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     The second sibling of a parent element.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :only-of-type
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p:only-of-type {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the &lt;p&gt; elements which are only &lt;p&gt; elements inside its parent
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :only-child
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p:only-child {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the &lt;p&gt; elements which are only child of a parent element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :optional
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input:optional {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     The input elements with no "required" attribute
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :required
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input:required {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Selects input elements with the "required" attribute specified
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :root
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      :root {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     The Root element of document
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ::selection
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      ::selection {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     The portion of an element that is selected by a user
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :valid
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input:valid {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     All the input elements with a valid value
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     :visited
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      a:visited {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Selects all visited links
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Pseudo-element selectors
+ </h2>
+ <table columns="3" rows="7">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Syntax
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Example
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Description
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     ::after
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p::after {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Inserts content after content of &lt;p&gt; element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ::before
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p::before {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Inserts content before content of &lt;p&gt; element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ::first-letter
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p::first-letter {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Selects first letter of every &lt;p&gt; element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ::first-line
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      p::first-line {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Selects first line of every &lt;p&gt; element
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ::placeholder
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      input::placeholder {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Selects input elements with "placeholder" attribute specified
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ::marker
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      ::marker {
+}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Selects markers in a list
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
